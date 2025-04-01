@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+.login-button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-section {
+    display: flex;
+    justify-content: center;
+}
+.menu-area {
+    position: relative;
+
+}
+.menu-list{
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto;  
+    padding: 0;
+}
+.menu-list li {
+    padding: 10px;
+}
+.menu-area {
+    display: flex;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.search-area {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.search-area input {
+    border: none;              
+    border-bottom: 1px solid #ccc; 
+    outline: none;             
+    margin-left: 8px;           
   }
+
+.product-card {
+    padding: 10px;
+    padding-top: 20px;
+}
+.product-card :hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.product-card img {
+    width: 320px;      /* 부모 요소 너비에 맞게 이미지 크기를 조절 */
+    height: auto;     /* 비율 유지 */
+    object-fit: cover; /* (옵션) 이미지 비율 유지하면서 영역에 꽉 차게 */
+    max-height: 700px; /* (옵션) 최대 높이 제한 (필요에 따라 조정) */
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+ .product-img{
+    display: flex;
+    justify-content: flex-end;
+ }
+
+ .size-border{
+    border: 1px solid black !important;
+    box-shadow: none !important;
+ }
