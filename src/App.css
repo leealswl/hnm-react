@@ -72,3 +72,122 @@
  .logo-img{
     cursor: pointer;
  }
+
+ .login {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    padding-top: 20px;
+    
+ }
+ .login-area {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.input-box {
+    width: 500px !important;
+}
+
+.colored-box {
+    background-color: #f0f0f0; 
+    border: none;         
+    padding: 20px;       
+    border-radius: 4px;    
+  }
+
+.empty-message {
+    padding: 20px;  
+    text-align: center;
+    font-size: 24px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* 기본 숨김 상태 */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .sidebar.open {
+    left: 0; /* 열렸을 때 화면에 표시 */
+  }
+  
+  .sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+  }
+  
+  .sidebar li {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.2s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #444;
+  }
+
+  /* 기본적으로 햄버거 버튼은 숨김 처리 */
+.sidebar-toggle-btn {
+    display: none;
+  }
+  
+  /* 모바일 화면에서 햄버거 버튼 보이기 */
+  @media (max-width: 768px) {
+    .sidebar-toggle-btn {
+      display: block;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1100;
+    }
+  }
+  
+  .product-card {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* 내부 텍스트를 가운데 정렬 */
+  }
+@media (max-width: 768px) {
+    .search-area {
+      display: none;
+    } 
+    .menu-area {
+        display: none;
+    }
+  }

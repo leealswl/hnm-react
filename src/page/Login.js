@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 
 
+
 const Login = ({setAuthenticate}) => {
   const navigate = useNavigate()
   const loginUser=(e)=>{
@@ -14,23 +15,26 @@ const Login = ({setAuthenticate}) => {
   }
   return (
   <Container>
-    <div>
-      <Form onSubmit={(e)=>loginUser(e)}>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+    <div className='login-area'>
+      <div className="colored-box">
+        <Form onSubmit={(e)=>loginUser(e)}>
+        <div className='login'>로그인</div>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-      </Form.Group>
+          <Form.Control className='input-box' type="email" placeholder="Enter email" />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
-      <Button variant="danger" type="submit">
-        Login
-      </Button>
-    </Form>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control className='input-box' type="password" placeholder="Password" />
+        </Form.Group>
+        <Button variant="danger" type="submit">
+          Login
+        </Button>
+        </Form>
+      </div>
     </div>
-    </Container>
+  </Container>
   )
 }
 

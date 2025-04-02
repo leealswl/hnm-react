@@ -7,7 +7,7 @@ import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
 import { useEffect, useState } from 'react';
 import PrivateRoute from './route/PrivateRoute';
-
+import Sidebar from './component/Sidebar';
 
 
 //전체상품페이지, 로그인페이지, 상품상세페이지 3개
@@ -24,17 +24,30 @@ import PrivateRoute from './route/PrivateRoute';
 
 function App() {
   const [authenticate, setAuthenticate]=useState(false)
+  
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setSidebarOpen(prev => !prev);
+  };
+
   useEffect(()=>{
-  console.log("인증",authenticate)
+  // console.log("인증",authenticate)
   },[authenticate])
   return (
     <div>
-      <Navbar />
+      {/* authenticate 상태와 setAuthenticate 함수를 Navbar에 props로 전달 */}
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
+
+      <button onClick={toggleSidebar} className="sidebar-toggle-btn">
+        ☰
+      </button>
+      <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+      
       <Routes>
         <Route path='/' element={<ProductAll/>} />
         <Route 
             path='/login' 
-            element={<Login setAuthenticate={setAuthenticate}/>} />
+            element={<Login setAuthenticate={setAuthenticate} />} />
         <Route 
             path='/product/:id' 
             element={<PrivateRoute authenticate={authenticate} />} />
