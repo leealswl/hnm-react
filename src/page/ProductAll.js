@@ -10,7 +10,7 @@ const ProductAll = () => {
   
   const getProducts = async () => {
       let searchQuery = query.get("q") || "";
-      let url = `http://localhost:4000/products?=${searchQuery}`;
+      let url = `https://my-json-server.typicode.com/leealswl/hnm-react/products?=${searchQuery}`;
       console.log("fetch URL:", url);
       const res = await fetch(url);
       const data = await res.json();
