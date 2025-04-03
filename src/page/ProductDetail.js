@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const [selectedSize, setSelectedSize] = useState('사이즈 선택')
 
   const getProductDetail=async()=>{
-    let url=`https://my-json-server.typicode.com/leealswl/hnm-react/${id}`
+    let url=`https://my-json-server.typicode.com/leealswl/hnm-react/products/${id}`
     let res=await fetch(url)
     let data=await res.json()
     console.log("디테일데이터",data)
