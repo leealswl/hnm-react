@@ -4,7 +4,7 @@ import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate} from 'react-router-dom'
 
-
+//중간에 로딩바 넣어줄것 안그러면 검색내용이 없습니다로 나옴.
 const Navbar = ({ authenticate, setAuthenticate }) => {
     const menuList = [
     '여성',
